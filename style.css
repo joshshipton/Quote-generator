@@ -101,13 +101,6 @@ button:active{
     100% { transform: rotate(360deg); }
   }
 
-
-
-
-
-
-
-
 /* Media Query: if <= Tablet  */
 /* Keeps design mobile responsive */
 @media screen and (max-width: 1000px) {

@@ -6,6 +6,8 @@ const twitterBtn = document.getElementById("twitter");
 const  newQuoteBtn= document.getElementById("new-quote");
 const loader = document.getElementById("loader");
 
+import data from './quotes.json' assert {type: 'json'};
+console.log(data)
 
 let apiQuotes = [];
 
@@ -50,22 +52,23 @@ function newQuote(){
     complete();
 }
 
-
 // Get Quotes From API
-async function getQuotes() {
-    loading();
-    const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
+ async function getQuotes() {
+     loading();
+    const apiUrl = 'quotes.json'
     try {
-        const response = await fetch(apiUrl);
-        apiQuotes = await response.json();
-        newQuote();
+         const response = await fetch(apiUrl);
+         apiQuotes = await response.json();
+         newQuote();
 
-    }catch(error){
-        console.log("something broke :(")
-        // Catch Error here
-        // send notif to me etc.
-    }
- }
+     }catch(error){
+         console.log("something broke :(")
+         console.log(error)
+         // Catch Error here
+         // send notif to me etc.
+     }
+  }
+
 
 // Twit button
 function tweetQuote(){
