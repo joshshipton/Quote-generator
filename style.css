@@ -17,8 +17,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
+.new-quote{
+    margin: 5px auto;
+    align-items: center;
+}
+
+/* need to figure out how to make it not change size so much */
 .quote-container{
     width: auto;
     max-width: 900px;
