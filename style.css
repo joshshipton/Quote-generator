@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,400&display=swap');
+
+
 html{
     box-sizing: border-box;
 
@@ -7,5 +10,60 @@ body{
     margin: 0;
     min-height: 100vh;
     background-color: black;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.716 0 0 6.716 0 15c8.284 0 15-6.716 15-15zM0 15c0 8.284 6.716 15 15 15 0-8.284-6.716-15-15-15zm30 0c0-8.284-6.716-15-15-15 0 8.284 6.716 15 15 15zm0 0c0 8.284-6.716 15-15 15 0-8.284 6.716-15 15-15z' fill='%23ffffff' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+    color: white;
+    font-family: Roboto Mono, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.quote-container{
+    width: auto;
+    max-width: 900px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px 10px rgba(255,223,0, 0.4)
+
+}
+
+.buttons-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-txt{
+    font-size: 2.75rem;
+
+}
+
+.long-quote{
+    font-size: 2rem;
+}
+
+.fa-quote-left, .fa-quote-right{
+    font-size: 1rem;
+}
+
+.quote-author{
+    margin-top: 12px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+/* Media Query: if <= Tablet  */
+/* Keeps design mobile responsive */
+@media screen and (max-width: 1000px) {
+    .quote-container{
+        margin: auto 10px;
+    }
+    .quote-text{
+        font-size: 2.5rem;
+    }
+   
+    
 }
