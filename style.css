@@ -30,9 +30,10 @@ body{
 }
 
 .buttons-container{
-    align-items: center;
+    margin-top: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between
+
 }
 
 .quote-txt{
@@ -45,7 +46,36 @@ body{
 }
 
 .fa-quote-left, .fa-quote-right{
-    font-size: 1rem;
+    font-size: 4rem;
+}
+
+button{
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: aliceblue;
+    outline: none;
+    padding: 0.5rem 1.8rem;
+    box-shadow: 0 0.3rem rgba(121, 121, 121, 0.6);
+}
+
+button:hover{
+    filter: brightness(110%);
+}
+
+button:active{
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65)
+}
+
+.twitter-button:hover{
+    color: #38a1f2;
+}
+
+.fa-twitter{
+    font-size: 1.5rem; 
 }
 
 .quote-author{
@@ -53,7 +83,16 @@ body{
     font-style: italic;
     font-weight: 400;
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
 }
+
+
+
+
+
+
+
 
 /* Media Query: if <= Tablet  */
 /* Keeps design mobile responsive */
