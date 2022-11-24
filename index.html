@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Philosophy Quote Generator</h1>
+    <div class="new-quote">
+        <button id="new-quote">New Quote</button>
+    </div>
     <div class="quote-container" id="quote-container"> 
         <!-- Quote -->
         <div class="quote-text">
             <i class="fas fa-quote-left"></i>
-            <span id="quote"></span>
+            <span id="said"></span>
             <!-- <i class="fas fa-quote-right"></i> -->
         </div>
         <!-- Author -->
@@ -27,7 +31,6 @@
             <button class="twitter-button" id="twitter" title="Tweet this!">
                 <i class="fab fa-twitter"></i>
             </button>
-            <button id="new-quote">New Quote</button>
         </div>
     </div>
     <!-- Loading icon -->
@@ -36,7 +39,7 @@
     </div>
 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script type='module' src="script.js"></script>
     
 </body>
 </html>

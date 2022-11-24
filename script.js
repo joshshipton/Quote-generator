@@ -1,13 +1,18 @@
 //connect html classes to js variables
 const quoteContainer = document.getElementById("quote-container");
-const quoteText = document.getElementById("quote");
+const quoteText = document.getElementById("said");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
-const  newQuoteBtn= document.getElementById("new-quote");
+const newQuoteBtn= document.getElementById("new-quote");
 const loader = document.getElementById("loader");
 
+loading();
 
-let apiQuotes = [];
+import data from './quotes.json' assert {type: 'json'};
+console.log(data);
+//loading();
+
+const apiQuotes = data;
 
 //show that its loading
 function loading(){
@@ -25,47 +30,26 @@ function complete(){
 function newQuote(){
     loading();
     //get random int for array of quotes 
-    let index = Math.floor(Math.random() * apiQuotes.length);
+    //should = apiquotes.length
+    let index = Math.floor(Math.random() * data.length);
+    console.log(index)
     let quote = apiQuotes[index];
+    console.log(quote);
 
     //replace txt content with selected quote content
-    authorText.textContent = quote.author;
-    quoteText.textContent = quote.text;
+    authorText.textContent = quote.source;
+    quoteText.textContent = quote.quote;
 
-    //in case there is no author
-    if(!quote.author){
-       authorText.textContent = "Anonymous";
-    }else{
-        authorText.textContent = quote.author;
-    }
     // Check Quote length to determine styling 
-    if(quote.text.length > 120){
+    //if(said.quote.length > 120){
         //adds a css class
-        quoteText.classList.add("long-quote");
-    }else{
-        quoteText.classList.remove("long-quote");
-    }
+        //quoteText.classList.add("long-quote");
+    //}else{
+        //quoteText.classList.remove("long-quote");
+    //}
     // Hide loader + set quote
-    quoteText.textContent = quote.text;
     complete();
 }
-
-
-// Get Quotes From API
-async function getQuotes() {
-    loading();
-    const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
-    try {
-        const response = await fetch(apiUrl);
-        apiQuotes = await response.json();
-        newQuote();
-
-    }catch(error){
-        console.log("something broke :(")
-        // Catch Error here
-        // send notif to me etc.
-    }
- }
 
 // Twit button
 function tweetQuote(){
@@ -79,4 +63,5 @@ newQuoteBtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
 
 // On Load
-getQuotes();
+//getQuotes();
+newQuote();
