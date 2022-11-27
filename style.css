@@ -6,6 +6,14 @@ html{
 
 }
 
+.enable-game{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 100px;
+}
+
 body{
     margin: 0;
     min-height: 100vh;
@@ -22,6 +30,7 @@ body{
 
 .new-quote{
     margin: 5px auto;
+    margin-bottom: 19px;
     align-items: center;
 }
 
@@ -40,6 +49,11 @@ body{
     margin-top: 15px;
     display: flex;
     justify-content: space-between
+
+}
+
+.hide{
+    opacity: 100%;
 
 }
 
@@ -72,6 +86,7 @@ button:hover{
     filter: brightness(110%);
 }
 
+
 button:active{
     transform: translate(0, 0.3rem);
     box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65)
@@ -93,6 +108,9 @@ button:active{
     display: flex;
     justify-content: center;
 }
+
+
+
 
 /* Loading Icon */
 .loader {
